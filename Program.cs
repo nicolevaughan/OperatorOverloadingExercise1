@@ -1,4 +1,4 @@
-﻿namespace OperatorOverloadingExercise1
+namespace OperatorOverloadingExercise1
 {
     public class Calculator
     {
@@ -75,12 +75,14 @@
                 if (numbers[i].number % 2 == 0)
                 {
                     // Code goes here to increment numbers[i] by 1
-                    numbers[i].number++;
+                    //numbers[i].number++;
+                    numbers[i]++;
                 }
                 else
                 {
                     // Code goes here to decrement numbers[i] by 1
-                    numbers[i].number--;
+                    //numbers[i].number--;
+                    numbers[i]--;
                 }
                 Console.Write(" " + numbers[i].number);
             }
@@ -136,21 +138,18 @@
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i].number > numToCompare.number)
+                if (numbers[i] > numToCompare)
                 {
-
                     Console.WriteLine($"{numbers[i].number} is greater than {numToCompare.number}");
-
                 }
-                if (numbers[i].number < numToCompare.number)
+                if (numbers[i] < numToCompare)
                 { 
                     Console.WriteLine($"{numbers[i].number} is less than {numToCompare.number}"); 
                 }
-
-                if (numbers[i].number  == numToCompare.number)
-                {
-                    Console.WriteLine($"{numbers[i].number} is equal to {numToCompare.number}");
-                }
+                
+                else   
+                Console.WriteLine($"{numbers[i].number} is equal to {numToCompare.number}");
+                
             }
         }
     }
